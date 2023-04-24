@@ -16,6 +16,10 @@ import java.util.List;
 @Controller
 //@RequestMapping("/first")
 public class FirstController {
+    @GetMapping
+    public String starPage(){
+        return "/start";
+    }
     @GetMapping("/hello")
     public String helloPage(HttpServletRequest request) {
         String name = request.getParameter("name");

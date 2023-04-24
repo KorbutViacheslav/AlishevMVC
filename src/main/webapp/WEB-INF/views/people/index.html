@@ -5,7 +5,10 @@
     <title>Index</title>
 </head>
 <body>
-All people:
+<a href="/people/new" style="color: green;">Create new person</a>
+
+<br>
+All people in database:
 <div th:each="person : ${people}">
     <a th:href="@{/people/{id}(id=${person.getId()})}" th:text="${person.getName()}">user</a>
 </div>
